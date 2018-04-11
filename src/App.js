@@ -38,19 +38,19 @@ class App extends Component {
   }
 
   addFavorite (index) {
-    localStorage.removeItem('cards')
-    localStorage.setItem('cards',JSON.stringify(this.state.cards));
     var cards = this.state.cards;
     cards[index].favorite = true;
     this.setState({cards:cards});
+    localStorage.removeItem('cards')
+    localStorage.setItem('cards',JSON.stringify(this.state.cards));
   }
 
   removeFavorite (index) {
-    localStorage.removeItem('cards')
-    localStorage.setItem('cards',JSON.stringify(this.state.cards));
     var cards = this.state.cards;
     cards[index].favorite = false;
     this.setState({cards:cards});
+    localStorage.removeItem('cards')
+    localStorage.setItem('cards',JSON.stringify(this.state.cards));
   }
 
   render() {
