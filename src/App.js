@@ -27,9 +27,6 @@ class App extends Component {
   }
 
   addCard () {
-    const less = require('less')
-    less.modifyVars({'@color':'#111'});
-    less.refreshStyles();
     this.state.cards.unshift({hex:'#'+this.state.hex,favorite:false});
     this.setState({cards:this.state.cards});
     this.setState({hex:''});
